@@ -1,0 +1,45 @@
+{
+  "name": "h5-px2rem-loader",
+  "description": "static json",
+  "homepage": "https://github.com/dylan-7/h5-px2rem-loader",
+  "version": "0.1.0",
+  "author": "dylan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylan-7/h5-px2rem-loader.git"
+  },
+  "main": "dist/index.js",
+  "contributors": [],
+  "keywords": [
+    "h5-px2rem-loader"
+  ],
+  "engines": {
+    "node": ">=0.6"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "types"
+  ],
+  "types": "./types/index.d.ts",
+  "devDependencies": {
+    "loader-utils": "^1.2.3"
+  },
+  "scripts": {
+    "prepublish": "yarn run build",
+    "pretest": "yarn run --silent readme && yarn run --silent lint",
+    "test": "yarn run --silent",
+    "tests-only": "node test",
+    "postlint": "",
+    "build": "yarn run clean && tsc --outDir build --declaration --declarationDir types && parcel build build/index.js --no-cache -d dist / ",
+    "clean": "rimraf dist types"
+  },
+  "bugs": {
+    "url": "https://github.com/dylan-7/h5-px2rem-loader/issues"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "license": "ISC"
+}
