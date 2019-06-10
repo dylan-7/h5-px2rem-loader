@@ -26,13 +26,6 @@
     "loader-utils": "^1.2.3"
   },
   "scripts": {
-    "prepublish": "yarn run build",
-    "pretest": "yarn run --silent readme && yarn run --silent lint",
-    "test": "yarn run --silent",
-    "tests-only": "node test",
-    "postlint": "",
-    "build": "yarn run clean && tsc --outDir build --declaration --declarationDir types && parcel build build/index.js --no-cache -d dist / ",
-    "clean": "rimraf dist types"
   },
   "bugs": {
     "url": "https://github.com/dylan-7/h5-px2rem-loader/issues"
